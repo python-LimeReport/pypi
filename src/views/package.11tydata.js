@@ -1,13 +1,13 @@
 module.exports = {
-    layout: 'base.njk',
-    
-    pagination: {
-        data: 'packages',
-        size: 1,
-        alias: 'package'
-    },
+  layout: "base.njk",
 
-    permalink: function (data) {
-        return data.package + "/"
-    },
-}
+  pagination: {
+    data: "packages",
+    size: 1,
+    alias: "package",
+  },
+
+  permalink: function (data) {
+    return data.package + "/";
+  },
+};

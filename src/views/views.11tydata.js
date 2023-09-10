@@ -1,5 +1,5 @@
 module.exports = {
-    pageUrl: function (data) {
-        return data.page.url
-    },
-}
+  pageUrl: function (data) {
+    return data.page.url;
+  },
+};

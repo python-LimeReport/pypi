@@ -25,7 +25,7 @@ jobs:
           npm run build:prod
       - uses: actions/upload-pages-artifact@v2
         with:
-          path: 'dist'
+          path: "dist"
 
   deploy:
     runs-on: ubuntu-latest

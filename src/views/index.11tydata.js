@@ -1,4 +1,4 @@
 module.exports = {
-    layout: 'base.njk',
-    permalink: '/',
-}
+  layout: "base.njk",
+  permalink: "/",
+};
