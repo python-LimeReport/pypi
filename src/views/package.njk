@@ -1,8 +1,8 @@
 {% macro whl_name(vs) %}{{ package | replace("-", "_") }}{{vs}}.whl{% endmacro %}
-{% macro download_url(vs) %}{{meta.githubReleaseRepo}}/releases/download/{{version.tag}}/{{whl_name(vs)}}{% endmacro %}
+{% macro download_url(vt, vs) %}{{meta.githubReleaseRepo}}/releases/download/{{vt}}/{{whl_name(vs)}}{% endmacro %}
 
 {%- for version in packageVersions %}
     {%- for vs in version.suffixes %}
-<a href="{{download_url(vs)}}" data-requires-python="{{version.requires_python | safe}}">{{whl_name(vs)}}</a>
+<a href="{{download_url(version.tag, vs)}}" data-requires-python="{{version.requires_python | safe}}">{{whl_name(vs)}}</a>
     {%- endfor %}
 {%- endfor %}
